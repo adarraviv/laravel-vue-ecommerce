@@ -170,7 +170,10 @@
                                                 </ul>
                                                 <span class="regular-price">{{$product->price}}</span>
                                                 <span class="discount-price">{{$product->sale_price}}</span>
-                                                <add-to-cart-button product-id="{{$product->id}}" user-id="{{auth()->user()->id ?? 0}}"/>
+                                                <!-- <add-to-cart-button /> -->
+                                                <add-to-cart-button product-id="{{$product->id}}" 
+                                                user-id="{{auth()->user()->id ?? 0}}"
+                                                />
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
@@ -732,11 +735,11 @@
                 <div class="col-lg-12">
                     <div class="showcase-active mt-65">
                         <div class="single-showcase">
-                            <img src="assets/images/showcase/t-1.jpg" alt="Testimonial">
+                            <!-- <img src="assets/images/showcase/t-1.jpg" alt="Testimonial"> -->
                             <a href="#" class="main-btn">Full Preview</a>
                         </div> <!-- single showcase -->
                         <div class="single-showcase">
-                            <img src="assets/images/showcase/t-2.jpg" alt="Testimonial">
+                            <!-- <img src="assets/images/showcase/t-2.jpg" alt="Testimonial"> -->
                             <a href="#" class="main-btn">Full Preview</a>
                         </div> <!-- single showcase -->
                     </div> <!-- showcase active -->
@@ -763,8 +766,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-8">
                     <div class="single-temp text-center mt-30">
                         <div class="team-image">
-                            <img src="assets/images/team/t-1.jpg"
-                             alt="Team">
+                            <!-- <img src="assets/images/team/t-1.jpg"
+                             alt="Team"> -->
                         </div>
                         <div class="team-content mt-30">
                             <h4 class="title mb-10"><a href="#">Celina Gomez</a></h4>
@@ -780,8 +783,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-8">
                     <div class="single-temp text-center mt-30">
                         <div class="team-image">
-                            <img src="assets/images/team/t-2.jpg"
-                             alt="Team">
+                            <!-- <img src="assets/images/team/t-2.jpg"
+                             alt="Team"> -->
                         </div>
                         <div class="team-content mt-30">
                             <h4 class="title mb-10"><a href="#">Patric Green</a></h4>
@@ -797,8 +800,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-8">
                     <div class="single-temp text-center mt-30">
                         <div class="team-image">
-                            <img src="assets/images/team/t-3.jpg"
-                             alt="Team">
+                            <!-- <img src="assets/images/team/t-3.jpg" -->
+                             <!-- alt="Team"> -->
                         </div>
                         <div class="team-content mt-30">
                             <h4 class="title mb-10"><a href="#">Mark Parker</a></h4>
@@ -814,8 +817,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-8">
                     <div class="single-temp text-center mt-30">
                         <div class="team-image">
-                            <img src="assets/images/team/t-4.jpg"
-                             alt="Team">
+                            <!-- <img src="assets/images/team/t-4.jpg" -->
+                             <!-- alt="Team"> -->
                         </div>
                         <div class="team-content mt-30">
                             <h4 class="title mb-10"><a href="#">Daryl Dixon</a></h4>
