@@ -11,8 +11,10 @@
     
     <!--====== Title ======-->
     <title>Furnish - Furniture and Decor Website Template</title>
-    
-    <script src="{{ asset('css/app.css') }}" defer></script>
+
+    @yield('styles')
+
+    <link rel="stylesheet" src="{{ asset('css/app.css') }}" >
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
@@ -40,9 +42,7 @@
     
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="assets/css/responsive.css">
-  
-    @yield('styles')
-  
+    
 </head>
 
 <body>
@@ -65,7 +65,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
+                        <nav class="navbar navbar-fixed-top navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
                                 <img src="assets/images/logo.png" alt="Logo">
                             </a> <!-- Logo -->
@@ -100,16 +100,20 @@
                                     </li>
                                     @if (Route::has('login'))
                                         @auth
-                                        <li class="nav-item">
-                                            <a href="{{ url('/home') }}">Cart</a>
-                                            </li>
+                                            <cart />
                                         @else
                                         <li class="nav-item">
-                                            <a href="{{ route('login') }}">Log in</a>
+                                            <a href="{{ route('login') }}"
+                                            class="text-sm text-gray-700 dark:text-gray-500 underline">
+                                                Log in
+                                            </a>
                                         </li>
                                             @if (Route::has('register'))
                                             <li class="nav-item">
-                                                <a href="{{ route('register') }}">Register</a>
+                                                <a href="{{ route('register') }}"
+                                                class="text-sm text-gray-700 dark:text-gray-500 underline">
+                                                    Register
+                                                </a>
                                             </li>
                                             @endif
                                         @endauth
@@ -153,7 +157,13 @@
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 
-    @yield('scripts')
+    <!-- @yield('content') -->
+
+    <script>
+        window.onbeforeunload = function(){
+            window.scrollTo(0,0);
+        }
+    </script>    
 
 </body>
 
